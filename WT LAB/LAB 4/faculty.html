@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        faculty1={
+            name:'prof1',
+            age:'32',
+            expreince:'4',
+            subject:'maths'
+        }
+        faculty2={
+            name:'prof2',
+            age:'41',
+            expreince:'15',
+            subject:'java'
+        }
+        faculty2={
+            name:'prof2',
+            age:41,
+            expreince:'15',
+            subject:'java'
+        }
+        faculty3={
+            name:'prof3',
+            age:'43',
+            expreince:18,
+            subject:'english'
+        }
+        faculty4={
+            name:'prof4',
+            age:41,
+            expreince:15,
+            subject:'java'
+        }
+        faculty=[faculty1,faculty2,faculty3,faculty4];
+        for(i=0;i<4;i++){
+        document.write("<table border=1px>")
+            document.write("<th>faculty"+[i+1]+"</th>")
+            document.write("<tr>")
+                document.write("<td>Name:"+faculty[i].name+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>age:"+faculty[i].age+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>expreince:"+faculty[i].expreince+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>subject:"+faculty[i].subject+"</td>")
+            document.write("</tr>")   
+        document.write("</table>")
+    }
+    </script>
+</body>
+</html>

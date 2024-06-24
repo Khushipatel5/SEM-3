@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=new Array()
+        arr=['abcd','efgh','ijkl','mnop','qrst','uvwx','yz'];
+        searchWord=prompt("enter the word you want to search");
+        for(i=0;i<arr.length;i++){
+            if(arr[i]==searchWord){
+                document.write("word found at: "+i+" index");
+                break;
+            }
+            if(string_arr[i]!=searchWord){
+                document.write("Word not found");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

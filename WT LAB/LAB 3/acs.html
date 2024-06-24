@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=new Array()
+        var size=parseInt(prompt("Enter the size of array"))
+        for(i=0;i<size;i++){
+            arr[i]=parseInt(prompt("Enter the"+ i +"element"))
+        }
+        var temp
+        for (i = 0; i < size; ++i){
+        for (j = i + 1; j < size; j++){
+          if (arr[i] > arr[j]){
+            a = arr[i];
+            arr[i] = arr[j];
+            arr[j] = a;
+        }
+        }
+        }
+        document.write(arr)
+    </script>
+</body>
+</html>

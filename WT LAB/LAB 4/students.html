@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        student=[
+        {
+            studentname:'name1',
+            class:'8-a',
+            rollno:101,
+            city:'jamnagar'
+        },
+        {
+            studentname:'name2',
+            class:'8-a',
+            rollno:102,
+            city:'lunawada'
+        },
+        {
+            studentname:'name3',
+            class:'8-a',
+            rollno:103,
+            city:'santrampur'
+        },
+        {
+            studentname:'name4',
+            class:'8-a',
+            rollno:104,
+            city:'jamnagar'
+        }
+    ]
+    for(i=0;i<4;i++){
+        document.write("<table border=1px>")
+            document.write("<th>student"+[i]+"</th>")
+            document.write("<tr>")
+                document.write("<td>Name:"+student[i].studentname+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>Class:"+student[i].class+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>Rollno:"+student[i].rollno+"</td>")
+                document.write("</tr>")
+                document.write("<tr>")
+                document.write("<td>City:"+student[i].city+"</td>")
+            document.write("</tr>")   
+        document.write("</table>")
+    }
+    </script>
+</body>
+</html>
