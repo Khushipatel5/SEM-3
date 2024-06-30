@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #table{
+            height: 200px;
+            width: 200px;
+        }
+        #box{
+            height: 60px;
+        }
+        #btnn{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" align="center" id="table">
+        <tr>
+            <td colspan="4"><input type="text" id="box"></td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" id="btnn" onclick="addno('7')" value="7"></td>
+            <td><input type="button" id="btnn" onclick="addno('8')" value="8"></td>
+            <td><input type="button" id="btnn" onclick="addno('9')" value="9"></td>
+            <td><input type="button" id="btnn" onclick="addno('+')" value="+"></td>       
+        </tr>
+        <tr align="center">
+            <td><input type="button" id="btnn" onclick="addno('4')" value="4"></td>
+            <td><input type="button" id="btnn" onclick="addno('5')" value="5"></td>
+            <td><input type="button" id="btnn" onclick="addno('6')" value="6"></td>
+            <td><input type="button" id="btnn" onclick="addno('-')" value="-"></td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" id="btnn" onclick="addno('1')" value="1"></td>
+            <td><input type="button" id="btnn" onclick="addno('2')" value="2"></td>
+            <td><input type="button" id="btnn" onclick="addno('3')" value="3"></td>
+            <td><input type="button" id="btnn" onclick="addno('*')" value="*"></td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" id="btnn" onclick="CE()" value="CE"></td>
+            <td><input type="button" id="btnn" onclick="addno('0')" value="0"></td>
+            <td><input type="button" id="btnn" onclick="answer()" value="="></td>
+            <td><input type="button" id="btnn" onclick="addno('/')" value="/"></td>
+        </tr>
+        
+    </table>
+    <script>
+        function addno(String){
+            document.getElementById("box").value+=String
+
+        }
+        function answer(){
+            ans=eval(document.getElementById('box').value)
+            document.getElementById('box').value=ans;
+
+    
+        }
+        
+        function CE(){
+            document.getElementById(box).value=' ';
+        }
+    </script>
+</body>
+</html>
