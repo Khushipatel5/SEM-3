@@ -17,21 +17,20 @@ public class multiply {
                 arr2[m][n]=sc.nextInt();
             }
         }
-        // for(int i=0;i<3;i++){
-        //     for(int j=0;j<2;j++){
-        //         for(int m=0;m<3;m++){
-        //             for(int n=0;n<2;n++){
-        //                 arr3[i][n]=(arr1[i][j]*arr2[m][n])+(arr1[i][j+1]*arr2[m+1][n]);
-        //             }
-        //         }
-        //     }
-        // }
-        for(int i=0;i<3;i++){
-            for (int j=0;j<3;j++){
-                System.out.print(arr3[i][j]);
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+               for (int k = 0; k < 2; ++k) {
+                  arr3[i][j] += arr1[i][k] * arr2[k][j];
+               }
+            }
+         }
+         System.out.println("Multiplied array");
+         for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+               System.out.print(arr3[i][j]+" ");
             }
             System.out.print("\n");
-        }
+         }
 
     }
 }
