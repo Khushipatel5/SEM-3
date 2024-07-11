@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            text-align: center;
+            width: 100%;
+        }
+        .left{
+            width: 40%;
+            text-align: right;
+            float: left;
+        }
+        .right{
+            text-align: left;
+            width: 40%;
+            float: right;
+        }
+        .center{
+            width: 20%;
+            float: left;
+        }
+        .Submit{
+            border: 1px solid black;
+            padding-top: 20%;
+            text-align: center;
+        }
+        button{
+            height: 35px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"> 
+        <div class="left">
+            <label>Enter username</label>
+            <br><br>
+            <label>Enter password</label>
+            <br><br>
+            
+            <label>Confirm password</label>
+            <br><br>
+            <label>Enter age</label>
+            <br><br>
+            <label>Enter email</label>
+            <br><br>
+            <label>Enter enrollment no of 11  digits</label>
+
+        </div>
+        <div class="center"></div>
+        <div class="right">
+            <input type="text" id="username">
+            <br><br>
+            <input type="text" id="pass">
+            <br><br>
+            <input type="text" id="rpass">
+            <br><br>
+            <input type="number" id="age">
+            <br><br>
+            <input type="email" id="email"> 
+            <br><br>
+            <input type="text" id="enroll">
+            <br><br></div>
+        
+        
+        
+    </div>
+    <div class="Submit"><button onclick="validate()">Submit</button></div>
+    <script>
+        function validate(){
+            var uname=document.getElementById('username').value
+            var pass=document.getElementById('pass').value
+            var rpass=document.getElementById('rpass').value 
+            var age=document.getElementById('age').value
+            var email=document.getElementById('email').value
+            var enroll=document.getElementById('enroll').value
+
+            if(uname.length<8){
+                alert("username length is invalid")
+            }
+            
+            let pattern=/(?=.*[0-9])(?=.*[@#$])[a-z A-z]{8,12}/
+            let regex= new RegExp(pattern);
+            if(!regex.test('pass')&& pass.length!=12){
+                alert("enter a valid password")
+            }
+            if(pass!=rpass){
+                alert("password doesnot match")
+            }
+            
+            if(age<18){
+                alert('your age is not applicable')
+            }
+            
+            let emailpattern=/[\w]{8,16}+@+[a-z]{5,6}+.com/
+            let regex1=new RegExp(emailpattern)
+            if(!regex1.test('emailpattern')){
+                alert("enter a valid email")
+            }
+            if(enroll.length!=11 ){
+                alert('entervalid enrollment number of 11 digits')
+            }
+            
+        }
+    </script>
+</body>
+</html>
