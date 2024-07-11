@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        PersonalInformation={
+            Name:'KHUSHI PATEL',
+            Contact:6598461214,
+            Email:"kjp@gmail.com",
+            Address:"Reliance greens",
+            City:'jamnagar'
+        }
+        ParentInformation={
+            FName:'JAGDISH PATEL',
+            FContact:6598461214,
+            FEmail:"jp@gmail.com",
+            Addres:"Movasa",
+
+        }
+        Info={...PersonalInformation,...ParentInformation}
+        console.log(Info)
+        pr2={...PersonalInformation,...ParentInformation,Fname}
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="Mycalc(5,5,'+',result)"> click</button>
+    <script>
+        function result(ans){
+            console.log(ans)
+        }
+        function Mycalc(a,b,c,callback){
+            
+            if(c=='+'){
+                ans=a+b
+            }
+            else if(c=='-'){
+                ans=b-a
+            }
+            else if(c=='*'){
+                ans=a*b
+            }
+            else if(c=='/'){
+                ans=a/b
+            }
+            callback(ans);
+            
+        }
+    
+    </script>
+</body>
+</html>

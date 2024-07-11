@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Multiple Images on Click</title>
+<style>
+    /* Optional: CSS for image styling */
+    #myImage {
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+    }
+    button{
+        padding: 25px;
+    }
+</style>
+</head>
+<body>
+
+<img id="myImage" src="./img1.png" alt="Image 1">
+
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+    var images = [
+        "./img1.png",
+        "./Screenshot 2024-06-26 075133.png",
+        "./Screenshot 2024-07-10 215014.png",
+        "./Screenshot 2024-07-10 215154.png"
+    ];
+    var currentImageIndex = 0;
+    var imageElement = document.getElementById('myImage');
+
+    // Function to change the image
+    function changeImage() {
+        currentImageIndex++;
+        if (currentImageIndex >= images.length) {
+            currentImageIndex = 0;  // Reset to the first image
+        }
+        imageElement.src = images[currentImageIndex];
+    }
+</script>
+
+</body>
+</html>

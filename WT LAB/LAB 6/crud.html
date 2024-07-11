@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            width: 70px;
+        }
+        table{
+            text-align: center;
+        }
+        button:hover{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name" ><br>
+    <input type="number" id="rollno" ><br>
+    <input type="button" id="add" value="Add" onclick="add()">
+    <div id="result">
+        hgfg
+	</div>
+
+    <script>
+        a=[
+            {
+            name:'khushi',
+            rollno:101
+            },
+            {
+            name:'anjali',
+            rollno:102
+            },
+            {
+            name:'dhara',
+            rollno:103
+            }
+    ]
+    e=0
+    index=0
+    function display(){
+    
+        temp=document.getElementById('result')
+        tempstring='';
+        tempstring+='<table border="1px solid black" >'
+        for(i=0;i<a.length;i++){
+        tempstring+='<tr>'
+        tempstring+='<td>'+a[i].name+'</td>';
+        tempstring+='<td>'+a[i].rollno+'</td>';
+        tempstring+='<td><button onclick="del('+i+')">delete</td>';
+        tempstring+='<td><button onclick="edit('+i+')">edit</td>';
+        tempstring+='</tr>'
+       }
+       
+       tempstring+='</table>'
+
+       temp.innerHTML=tempstring;
+       document.getElementById('name').value='';
+       document.getElementById('rollno').value='';
+    
+    }
+
+    display()
+
+    function add(){
+        if(e==0){
+            document.getElementById('name')
+            tempobj={
+                name:document.getElementById('name').value,
+                rollno:document.getElementById('rollno').value
+            }   
+            a.push(tempobj)
+            display()
+        }
+        if(e==1){
+        
+            a[index]={
+                name: document.getElementById('name').value , 
+                rollno: document.getElementById('rollno').value
+            }
+            document.getElementById('add').value="Add"
+            document.getElementById('name').value=""
+            document.getElementById('rollno').value=""
+            e=0;
+
+            display()
+
+        }
+    }
+    function del(id){
+        a.splice(id,1)
+        display();
+
+    }
+    function edit(id){
+        e=1
+        document.getElementById('add').value="Edit"
+        document.getElementById('name').value = a[id].name;
+        document.getElementById('rollno').value = a[id].rollno;
+        11111111111111```````````````````
+        index=id
+    }
+
+    
+    </script>
+</body>
+</html>
