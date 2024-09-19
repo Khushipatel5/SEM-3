@@ -1,0 +1,68 @@
+  index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import Layout  from './layout';
+import Contact from './contact';
+import Home from './home';
+import About from './about';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <>
+        <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<Layout/>}>
+        <Route path="home" element={<Home/>}></Route>
+        <Route path="about" element={<About/>}></Route>
+        <Route path="contact" element={<Contact/>}></Route>
+
+        </Route>
+    </Routes>
+    </BrowserRouter>
+    </>
+    
+)
+----------------------------------------------------------------------------
+import { Link,Outlet } from "react-router-dom"
+
+function Layout(){
+    return<>
+    <h1>Headeer here</h1>
+    <Link to="/home">Home</Link>
+    <Link to="/about">About</Link>
+
+    <Link to="/contact">Contact</Link>
+
+    <Outlet/>
+   <h1>Footer here</h1>
+    </>
+}
+export default Layout
+
+-----------------------------------------------------------------------
+home.js
+function Home(){
+    return <h1>HOME PAGE</h1>
+}
+export default Home
+-----------------------------------------------------------------------
+
+
+about.js
+function About(){
+    return <h1>ABOUT PAGE</h1>
+}
+export default About
+
+-----------------------------------------------------------------------
+
+contact.js
+function Contact(){
+    return <h1>CONTACT PAGE</h1>
+}
+export default Contact
