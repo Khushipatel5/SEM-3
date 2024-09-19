@@ -1,0 +1,52 @@
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import {Hello,Name} from './hello'
+
+const student=[
+    {
+    name:'khushi',
+    rollno:152
+    },
+    {
+    name:'anjali',
+    rollno:146
+    }
+]
+const studentformatted=student.map((stu)=>{
+    return(
+        <>
+        <table>
+            <tr>
+                <td>{stu.name}</td>
+                <td>{stu.rollno}</td>
+            </tr>
+        </table>
+        </>
+    )
+})
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+ <>
+ <Hello/>
+ <Name/>
+ <ul>
+    {studentformatted}
+ </ul>
+ </>
+  
+);
+
+
+
+hello.js
+ function Hello(props){
+    return 'hello world from other file'
+  }
+ function Name(){
+    return 'khushi'
+}
+export {Hello,Name}
